@@ -1,0 +1,50 @@
+[project]
+name = "andalucia-quick-data"
+version = "0.1.0"
+description = "Librería Python para acceder en 3 líneas a datos espaciales y estadísticos de Andalucía"
+authors = [
+    {name = "Equipo Andalucia Quick Data"}
+]
+readme = "README.md"
+license = {text = "MIT"}
+keywords = ["andalucia", "geodata", "geopandas", "wfs", "DERA", "SIMA", "IECA"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "geopandas (>=1.1.2,<2.0.0)",
+    "owslib (>=0.35.0,<0.36.0)",
+    "requests (>=2.32.5,<3.0.0)",
+    "beautifulsoup4 (>=4.14.3,<5.0.0)",
+    "folium (>=0.20.0,<0.21.0)",
+    "plotly (>=6.6.0,<7.0.0)",
+    "pyarrow (>=23.0.1,<24.0.0)"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/equipo-aqd/andalucia-quick-data"
+"Bug Tracker" = "https://github.com/equipo-aqd/andalucia-quick-data/issues"
+"Documentation" = "https://andalucia-quick-data.readthedocs.io"
+
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.0"
+pytest-cov = ">=4.0"
+ruff = ">=0.1.0"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+[tool.coverage.run]
+source = ["andalucia_quick_data"]
+omit = ["tests/*"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
