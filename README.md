@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Andalucía Quick Data
 
 **Andalucía Quick Data** es una librería Python diseñada para que Analistas de Datos puedan consumir de forma **extremadamente rápida y sencilla** los datos espaciales (DERA) y las estadísticas municipales (SIMA) de la Junta de Andalucía.
@@ -78,3 +79,6 @@ mapa_folium.save("mi_mapa_málaga.html")
 ---
 
 > Diseñado con pragmatismo para simplificar la vida a los Analistas de Datos de Andalucía.
+=======
+# Proyecto-final
+>>>>>>> origin/main
